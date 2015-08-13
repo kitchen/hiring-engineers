@@ -30,3 +30,14 @@ Your answers to the questions go here.
 * I fired up ab against both /hi and /foo. They have different sleeps so they should produce different metrics. I also changed around the sleeps a couple of times to get non-flatline-graphs :)
 
 * graph [here](https://app.datadoghq.com/event/event?id=2938762822831575041)
+
+# Level 4
+
+* total counts: https://app.datadoghq.com/event/event?id=2938970000075001857
+* counts broken down by page: https://app.datadoghq.com/event/event?id=2938969919611473923
+
+Also note that the statsd timing functionality keeps track of counts, so my extra count is redundant. I want to say I had problems with that before in another life (and using statsd + graphite vs datadog) so I keep both metrics.
+
+Spikiness is caused by metric storage alignment? I honestly am not sure :) I also am not really seeing spikiness, but my application and its load is *extremely* artificial, so I may just not be getting very good data.
+
+
