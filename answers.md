@@ -40,4 +40,10 @@ Also note that the statsd timing functionality keeps track of counts, so my extr
 
 Spikiness is caused by metric storage alignment? I honestly am not sure :) I also am not really seeing spikiness, but my application and its load is *extremely* artificial, so I may just not be getting very good data.
 
+# Level 5
+
+After an embarassingly long struggle with `/etc/dd-agent/conf.d/random.yml` vs `/etc/dd-agent/conf.d/random.yaml`, it is up and running!
+
+Graph can be found here: https://app.datadoghq.com/event/event?id=2939013494588051457
+
 
