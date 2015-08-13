@@ -21,3 +21,12 @@ Your answers to the questions go here.
 
 4. Request rate and speed vs cpu load: [graph here](https://app.datadoghq.com/dash/63238/response-times?live=true&page=0&is_auto=false&from_ts=1439329482000&to_ts=1439333082000&tile_size=m)
 
+# Level 3
+
+* See [level3/app.rb](level3/app.rb)
+
+    Also note that I would not have done it this way with a real web app. I would have made a rack middleware for this to time *all* calls, and allow (at least in rails) controllers to specify their own tags on the latency metrics. I did it here this way for brevity :)
+
+* I fired up ab against both /hi and /foo. They have different sleeps so they should produce different metrics. I also changed around the sleeps a couple of times to get non-flatline-graphs :)
+
+* graph [here](https://app.datadoghq.com/event/event?id=2938762822831575041)
